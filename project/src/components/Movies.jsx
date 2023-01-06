@@ -5,6 +5,7 @@ import NoImg from '../images/noimage.png'
 import '../styles/Movies.scss'
 import { Container } from './Navbar'
 import {AiOutlineCloseCircle} from 'react-icons/ai'
+import MoviePlay from './MoviePlay'
 
 function Movies() {
     const {toggle, inputValue}=useContext(Container)
@@ -51,6 +52,7 @@ function Movies() {
 
         </div>
     </div>
+    {vid? console.log('movies'):<MoviePlay/>}
     <AiOutlineCloseCircle id={toggle?'Nothing':"Exit1"}
       className={toggle?'Darktheme':'LightThemeClose'}
       fontSize={55} color='#fff' cursor='pointer'
